@@ -2,38 +2,22 @@
   <section class="container">
     <div>
       <Navigation />
-      <app-logo/>
       <home-page />
-      <h1 class="title">
-        nuxt-test
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <About />
     </div>
   </section>
 </template>
 
 <script>
 import Navigation from '~/components/Navigation'
-import AppLogo from '~/components/AppLogo.vue'
 import HomePage from '~/components/HomePage'
+import About from '~/components/About'
 
 export default {
   components: {
     Navigation,
-    AppLogo,
-    HomePage
+    HomePage,
+    About
   }
 }
 </script>
