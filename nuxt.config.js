@@ -13,6 +13,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  css: [
+    '@/node_modules/bootstrap/dist/css/bootstrap.min.css'
+  ],
   /*
   ** Customize the progress bar color
   */
