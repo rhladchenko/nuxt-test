@@ -4,7 +4,11 @@
     </div>
 </template>
 
-<style>
-
-</style>
+<script>
+export default {
+  head: {
+    title: 'Home'
+  }
+}
+</script>
 

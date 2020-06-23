@@ -1,9 +1,12 @@
 module.exports = {
+  mode: 'universal',
+  // mode: 'spa',
   /*
   ** Headers of the page
   */
   head: {
-    title: 'nuxt-test',
+    titleTemplate: '%s | nuxt-test',
+
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -15,7 +18,8 @@ module.exports = {
   },
 
   css: [
-    '@/node_modules/bootstrap/dist/css/bootstrap.min.css'
+    '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
+    'assets/main.css'
   ],
   /*
   ** Customize the progress bar color
@@ -24,11 +28,18 @@ module.exports = {
   /*
   ** Build configuration
   */
+  buildModules: [
+    // Simple usage
+    '@nuxtjs/vuetify',
+
+    // With options
+    ['@nuxtjs/vuetify', { /* module options */ }]
+  ],
   build: {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
